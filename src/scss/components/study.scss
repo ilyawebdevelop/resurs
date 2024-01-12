@@ -1,0 +1,55 @@
+.study {
+  background-color: #F2F2F2;
+  padding-top: 92px;
+  padding-bottom: 165px;
+  &Title {
+    margin-bottom: 17px;
+  }
+  &Text {
+    color: #000;
+    margin-bottom: 40px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    line-height: normal;
+  }
+  &Slider {
+    max-width: 1130px;
+    padding-top: 33px;
+    .swiper-wrapper {
+      justify-content: center;
+    }
+  }
+  &Slide {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    height: auto;
+    &Title {
+      color: #000;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: normal;
+    }
+    &Img {
+      margin-bottom: 18px;
+      margin-top: -30px;
+      img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 20px;   
+      }
+    }
+    &Link {
+      color: #39AE68;
+      font-weight: 400;
+      font-size: 16px;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+  }
+}

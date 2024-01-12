@@ -1,0 +1,56 @@
+.trust {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  &W {
+    display: flex;
+    justify-content: space-between;
+  }
+  &List {
+    display: flex;
+    column-gap: 18px;
+  }
+  &Item {
+    width: 180px;
+    height: 180px;
+    padding: 20px 18px;
+    background-color: #EDEDED;
+    border-radius: 27px;
+
+    &Img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+
+    }
+  }
+  &Title {
+    color: #202020;
+    max-width: 550px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: rgba(57, 174, 104, 0.08);
+      width: 200px;
+      height: 200px;
+      top: -60px;
+      left: -70px;
+      border-radius: 50%;
+    }
+    span {
+      font-size: 26px;
+      opacity: .2;
+      font-size: 28px;
+      display: block;
+      margin-top: 7px;
+    }
+  }
+  &Text {
+    color: #000;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+    max-width: 525px;
+    margin-top: 20px;
+  }
+}

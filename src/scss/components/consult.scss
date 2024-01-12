@@ -1,0 +1,48 @@
+.consult {
+  background-repeat: no-repeat;
+  background-size: cover;
+  .container {
+    position: relative;
+    padding-bottom: 85px;
+    padding-top: 70px;
+  }
+  &Content {
+    max-width: 900px;
+    margin-left: auto;
+  }
+  &Title {
+    max-width: 700px;
+    margin-bottom: 11px;
+    span {
+      color: #39AE68;
+    }
+  }
+  &Text { 
+   font-size: 22px;
+   line-height: normal;
+   margin-bottom: 25px;
+  }
+  &Img {
+   margin-left: auto;
+    &W {
+      width: calc(100% - 900px);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-right: 30px;
+    }
+  }
+  &Form {
+    &Grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 10px;
+      .inputW{
+        grid-column: 4 span;
+        input {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

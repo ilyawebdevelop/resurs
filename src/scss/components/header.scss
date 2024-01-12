@@ -1,0 +1,47 @@
+// Header
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  padding-top: 35px;
+  &W {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &Nav {
+    &List {
+      display: flex;
+      column-gap: 30px;
+      li {
+        a {
+          color: #FFF;
+          border-bottom: 1px solid transparent;
+          padding-bottom: 5px;
+          transition: border-color .2s linear, color .2s linear;
+          &:hover {
+            color: #39AE68;
+            border-color: #39AE68;
+          }
+        }
+      }
+    }
+  }
+  &Phone {
+    color: #39AE68;
+    font-weight: 700;
+    font-size: 19px;
+    transition: color .2s linear;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &Contacts {
+    &Name {
+      color: #fff;
+    }
+  }
+}

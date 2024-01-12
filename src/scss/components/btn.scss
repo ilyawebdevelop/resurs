@@ -1,0 +1,35 @@
+// btn
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 79px;
+  border: 1px solid #39AE68;
+  border-radius: 80px;
+  padding-left: 70px;
+  padding-right: 70px;
+  color: #39AE68;
+  font-size: 19px;
+  transition: border-color .2s linear, color .2s linear;
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+.introBtn {
+  margin-top: 40px;
+}
+.consultFormButton {
+  height: 70px;
+  background-color: #39AE68;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  transition: background-color .2s linear, border-color .2s linear;
+  &:hover {
+    border-color: #1B1B1B;
+    background-color: #1B1B1B;
+  }
+}
