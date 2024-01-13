@@ -20,18 +20,64 @@ var mySwiperStudy = new Swiper(studySlider, {
     nextEl: document.querySelector('.study .sliderArrowNext'),
     prevEl: document.querySelector('.study .sliderArrowPrev'),
   },
+  pagination: {
+    el: document.querySelector('.study .swiper-pagination'),
+    clickable: true,
+    type: 'bullets',
+  },
   breakpoints: {
     0: {
       slidesPerView: 1,
     },
-    576: {
+    768: {
       slidesPerView: 2,
     },
-    768: {
+    992: {
       slidesPerView: 3,
     },
   },
 });
 
+// Burger
+const btnMenu = document.querySelector('#toggle');
+const menu = document.querySelector('.headerNav');
+const menuClose = document.querySelector('.header-mob-close');
+const bodyEl = document.querySelector('body');
+const menuLine1 = document.querySelector('.top-bun');
+const menuLine2 = document.querySelector('.meat');
+const menuLine3 = document.querySelector('.bottom-bun');
+let navItemAll = document.querySelectorAll('.headerNavList li a');
 
+const toggleMenu = function () {
+  menu.classList.toggle('active');
+}
+const toggleBurger = function () {
+  btnMenu.classList.toggle('active');
+}
+const toggleMenuLine = function () {
+  menuLine1.classList.toggle('active');
+  menuLine2.classList.toggle('active');
+  menuLine3.classList.toggle('active');
+}
+const bodyOverflow = function () {
+  bodyEl.classList.toggle('hidden');
+}
+
+btnMenu?.addEventListener('click', function (e) {
+  e.stopPropagation();
+  toggleMenu();
+  toggleBurger();
+  bodyOverflow();
+  toggleMenuLine();
+});
+menuClose?.addEventListener('click', function (e) {
+  menuCloseF();
+});
+
+// close menu in Landing page
+$(document).on("click", ".headerNavList li a", function (e) {
+  $('.headerNav').removeClass('active');
+  $('body').removeClass('hidden');
+  toggleBurger();
+});
 

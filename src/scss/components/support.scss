@@ -4,6 +4,14 @@
     position: relative;
     padding-top: 150px;
     padding-bottom: 170px;
+    @media(max-width: 1400px){
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    @media(max-width: 575px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
   &Title {
     margin-bottom: 55px;
@@ -14,6 +22,17 @@
     column-gap: 13px;
     row-gap: 55px;
     padding-right: 110px;
+    position: relative;
+    z-index: 1;
+    @media(max-width: 1400px){
+      row-gap: 45px; 
+    }
+    @media(max-width: 1199px){
+      padding-right: 0;
+    }
+    @media(max-width: 575px){
+      row-gap: 30px;
+    }
   }
   &Item {
     grid-column: 4 span;
@@ -29,6 +48,25 @@
     padding-left: 28px;
     min-height: 136px;
     position: relative;
+    @media(max-width: 1400px){
+      font-size: 18px;
+      padding-top: 35px;
+      min-height: 120px;
+    }
+    @media(max-width: 991px){
+      grid-column: 6 span;
+    }
+    @media(max-width: 767px){
+      font-size: 16px;
+      min-height: 105px;
+    }
+    @media(max-width: 575px){
+      padding-left: 20px;
+    }
+    @media(max-width: 350px){
+      grid-column: 12 span;
+      min-height: unset;
+    }
 
     &::before {
       content: attr(data-count);
@@ -44,6 +82,12 @@
       justify-content: center;
       font-size: 26px;
       font-weight: 800;
+      @media(max-width: 575px){
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: -20px;
+      }
     }
   }
   &Abstract {

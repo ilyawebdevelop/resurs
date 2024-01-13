@@ -2,6 +2,9 @@
   &Table {
     margin-top: 80px;
     position: relative;
+    @media(max-width: 1400px){
+      margin-top: 60px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -18,21 +21,46 @@
       .serviceTableCol {
         font-size: 22px;
         font-weight: 600;
-        line-height: normal;       
+        line-height: normal;  
+        @media(max-width: 1400px){
+          font-size: 16px;
+        }     
+        @media(max-width: 991px){
+          font-weight: 500;
+        }
+        @media(max-width: 575px){
+          font-size: 11px;
+        }
       }
     }
 
     &Body {
       margin-top: 18px;
       padding-bottom: 39px;
+      @media(max-width: 575px){
+        margin-top: 10px;
+        padding-bottom: 20px;
+      }
       .serviceTableCol {
         font-size: 20px;
         font-weight: 600;
         line-height: normal;   
         max-width: 360px;
+        @media(max-width: 1400px){
+          font-size: 16px;
+        }
+        @media(max-width: 991px){
+          font-weight: 500;
+        }
+        @media(max-width: 575px){
+          font-size: 11px;        
+        }
         &:not(:first-child) {
           border-left: 3px solid rgba(215, 215, 215, 0.20);
           color: rgba($color: #fff, $alpha: .5);
+          @media(max-width: 575px){
+            border-left: 1px solid rgba(215, 215, 215, 0.20);
+          }
         }
       }
     }
@@ -48,11 +76,28 @@
       grid-column: 4 span;
       padding-top: 17px;
       padding-bottom: 17px;
+      @media(max-width: 1400px){
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+      @media(max-width: 575px){
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
   }
   .tableDescr {
     font-size: 20px;
     margin-top: 30px;
     margin-bottom: 38px;
+    @media(max-width: 1400px){
+      font-size: 16px;
+    }
+    @media(max-width: 767px){
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 }

@@ -2,6 +2,10 @@
   background-color: #141414;
   padding-top: 140px;
   padding-bottom: 120px;
+  @media(max-width: 1400px){
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
   .container {
     position: relative;
   }
@@ -9,15 +13,31 @@
     display: grid;
     align-items: center;
     grid-template-columns: 50% 50%;
+    @media(max-width: 575px){
+      grid-template-columns: 1fr;
+    }
+  }
+  &Content {
+    position: relative;
+    z-index: 1;
   }
   &Image {
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 1;
+    @media(max-width: 1400px){
+      width: 300px;
+    }
+    @media(max-width: 991px){
+      width: 200px;
+    }
   }
   &Title {
     max-width: 600px;
+    @media(max-width: 1400px){
+      max-width: 400px;
+    }
   }
   .abstract-left {
     position: absolute;
@@ -28,6 +48,10 @@
     font-size: 19px;
     margin-top: 50px;
     position: relative;
+    @media(max-width: 1400px){
+      font-size: 16px;
+      margin-top: 40px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -36,6 +60,9 @@
       background-color: #39AE68;
       height: 1px;
       width: 170px;
+      @media(max-width: 1400px){
+        top: -20px;
+      }
     }
   }  
 }
@@ -43,4 +70,20 @@
   position: absolute;
   right: -280px;
   top: -25px;  
+  @media(max-width: 1400px){
+    width: 600px;
+    right: 0;
+  }
+  @media(max-width: 991px){
+    width: 400px;
+    top: 20px;
+    right: -50px;
+  }
+  @media(max-width: 575px){
+    top: unset;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
 }

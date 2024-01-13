@@ -12,6 +12,10 @@
   color: #39AE68;
   font-size: 19px;
   transition: border-color .2s linear, color .2s linear;
+  @media(max-width: 1400px){
+    height: 60px;
+    font-size: 17px;
+  }
   &:hover {
     color: #fff;
     border-color: #fff;
@@ -20,6 +24,9 @@
 
 .introBtn {
   margin-top: 40px;
+  @media(max-width: 1400px){
+    margin-top: 25px;
+  }
 }
 .consultFormButton {
   height: 70px;
@@ -28,6 +35,9 @@
   font-weight: 700;
   width: 100%;
   transition: background-color .2s linear, border-color .2s linear;
+  @media(max-width: 767px){
+    height: 50px;
+  }
   &:hover {
     border-color: #1B1B1B;
     background-color: #1B1B1B;

@@ -3,31 +3,74 @@
   background-color: #1B1B1B;
   padding-top: 108px;
   padding-bottom: 108px;
+
+  @media(max-width: 1400px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media(max-width: 767px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @media(max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
+
   &Logo {
     img {
       width: 250px;
+      
+      @media(max-width: 991px) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+      }
+      @media(max-width: 575px){
+        max-width: 170px;
+      }
     }
   }
+
   &R {
     display: flex;
     column-gap: 50px;
+
+    @media(max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
+
   .contacts {
     &Item {
+      &:not(:last-child) {
+        @media(max-width: 991px) {
+          margin-bottom: 30px;
+        }
+      }
+
       &Name {
         font-size: 16px;
         margin-bottom: 9px;
+
+        @media(max-width: 991px) {
+          text-align: center;
+        }
       }
+
       &Link {
         font-size: 19px;
         font-weight: 700;
         color: #39AE68;
         transition: color .2s linear;
+
         &:hover {
           color: #fff;
         }
@@ -39,12 +82,29 @@
   .copyright {
     font-size: 14px;
     margin-top: 16px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+
+    @media(max-width: 991px) {
+      margin-bottom: 30px;
+      text-align: center;
+      justify-content: center;
+    }
+    @media(max-width: 575px){
+      flex-direction: column;
+      row-gap: 5px;
+    }
   }
+
   .socials {
     margin-top: 8px;
+
     &List {
       column-gap: 10px;
       align-items: center;
+      @media(max-width: 991px){
+        justify-content: center;
+      }
     }
   }
 }

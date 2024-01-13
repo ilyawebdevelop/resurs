@@ -22,7 +22,9 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-
+  @media(max-width: 1400px){
+    font-size: 15px;
+  }
   @media (max-width: 991px) {
     font-size: 16px;
     line-height: 24px;
@@ -63,10 +65,17 @@ table {
   @media(max-width: 1199px) {
     padding-left: 24px;
   }
+  @media(max-width: 767px){
+    height: 50px;
+    font-size: 16px;
+  }
 
   &::placeholder {
     color: #A3A3A3;
     font-size: 18px;
+    @media(max-width: 767px){
+      font-size: 16px;
+    }
   }
 }
 
@@ -127,11 +136,27 @@ h6 {
   font-weight: 900;
   font-size: 58px;
   line-height: normal;
+  @media(max-width: 1400px){
+    font-size: 35px;
+  }
+  @media(max-width: 991px){
+    font-size: 30px;
+  }
 }
 
 .pageTitle {
   font-size: 42px;
   margin-bottom: 30px;
+  @media(max-width: 1400px){
+    font-size: 32px;
+  }
+  @media(max-width: 991px){
+    font-size: 30px;
+  }
+  @media(max-width: 767px){
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
 }
 
 .h2 {
@@ -139,6 +164,9 @@ h6 {
   font-size: 46px;
   line-height: normal;
   color: #fff;
+  @media(max-width: 1400px){
+    font-size: 28px;
+  }
 
   &.title--black {
     color: #202020;
@@ -192,6 +220,9 @@ h3 {
   justify-content: center;
   border-radius: 50%;
   z-index: 1;
+  @media(max-width: 767px){
+    display: none;
+  }
 
   &.swiper-button-lock {
     display: none;
@@ -230,6 +261,14 @@ h3 {
   padding-top: 220px;
   padding-bottom: 205px;
   background-color: #141414;
+  @media(max-width: 1400px){
+    padding-top: 150px;
+    padding-bottom: 130px;
+  }
+  @media(max-width: 767px){
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
 
   .container {
     position: relative;
@@ -247,6 +286,11 @@ h3 {
     font-size: 19px;
     line-height: normal;
     margin-bottom: 55px;
+    @media(max-width: 1400px){
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
 
     p {
       margin-bottom: 15px;
@@ -259,16 +303,33 @@ h3 {
   grid-template-columns: repeat(12, 1fr);
   column-gap: 18px;
   row-gap: 15px;
+  @media(max-width: 767px){
+    row-gap: 9px;
+    column-gap: 9px;
+  }
+
 
   &Item {
     grid-column: 4 span;
+    @media(max-width: 767px){
+      grid-column: 6 span;
+    }
 
     img {
       width: 100%;
-      height: 100%;
+      height: 300px;
       object-fit: cover;
       border-radius: 18px;
       transition: opacity .2s linear;
+      @media(max-width: 1400px){
+        height: 220px;
+      }
+      @media(max-width: 991px){
+       height: 180px;
+      }
+      @media(max-width: 575px){
+        height: 35vw;
+      }
 
       &:hover {
         opacity: .8;

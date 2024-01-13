@@ -22,17 +22,25 @@
   <div class="container" style="color: #000;">
     <div class="headerW">
       <a href="/" class="headerLogo logo"><img src="img/admin/header/logo.png" alt="logo"></a>
+      <div class="hamburger" id="toggle">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+      </div><!-- /Hamburger Menu -->
       <nav class="headerNav">
         <ul class="headerNavList">
-          <li><a href="#">О нас </a></li>
-          <li><a href="#">Обучение </a></li>
-          <li><a href="#">Ресурсный центр </a></li>
-          <li><a href="#">Клиенты </a></li>
+          <li><a href="#about">О нас </a></li>
+          <li><a href="#study">Обучение </a></li>
+          <li><a href="#vacancy">Ресурсный центр </a></li>
+          <li><a href="#trust">Клиенты </a></li>
         </ul>
       </nav>
       <div class="headerContacts">
         <div class="headerContactsName">Сейчас на связи:</div>
-        <a href="tel:+78005007693" class="headerPhone">+7 (800) 500-76-93</a>
+        <a href="tel:+78005007693" class="headerPhone d-none d-sm-block">+7 (800) 500-76-93</a>
+        <a href="tel:+78005007693" class="headerPhone d-block d-sm-none">
+          <img src="img/icons/phone.svg" alt="icon">
+        </a>
       </div>
     </div>
   </div>
@@ -223,8 +231,10 @@
 
 
         </div>
+       
 
       </div>
+      <div class="swiper-pagination"></div>
       <button class="sliderArrow sliderArrowPrev"><img src="img/icons/slider-arrow-prev.png" alt="icon"></button>
       <button class="sliderArrow sliderArrowNext"><img src="img/icons/slider-arrow-next.png" alt="icon"></button>
     </div>
@@ -239,7 +249,7 @@
       <a href="/" class="footerLogo logo">
         <img src="img/admin/header/logo.png" alt="logo">
       </a>
-      <div class="d-flex gap-4 copyright">
+      <div class="d-flex copyright">
         <span>© АО "РЕСУРС ИТ", 2024</span>
         <span>ИНН 6670520415</span>
       </div>

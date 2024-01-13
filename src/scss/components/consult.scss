@@ -1,14 +1,34 @@
 .consult {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   .container {
     position: relative;
     padding-bottom: 85px;
     padding-top: 70px;
+    @media(max-width: 991px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @media(max-width: 767px){
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0;
+    }
   }
   &Content {
     max-width: 900px;
     margin-left: auto;
+    @media(max-width: 1400px){
+      max-width: 700px;
+    }
+    @media(max-width: 991px){
+      max-width: 400px;
+    }
+    @media(max-width: 767px){
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &Title {
     max-width: 700px;
@@ -21,15 +41,32 @@
    font-size: 22px;
    line-height: normal;
    margin-bottom: 25px;
+   @media(max-width: 991px){
+    font-size: 18px;
+   }
   }
   &Img {
    margin-left: auto;
+   @media(max-width: 1400px){
+    max-width: 250px;
+   }
+   @media(max-width: 767px){
+    margin-left: auto;
+    margin-right: auto;
+   }
     &W {
       width: calc(100% - 900px);
       position: absolute;
       bottom: 0;
       left: 0;
       padding-right: 30px;
+      @media(max-width: 1400px){
+        width: calc(100% - 700px);
+      }
+      @media(max-width: 767px){
+        position: unset;
+        width: 100%;
+      }
     }
   }
   &Form {
@@ -37,8 +74,14 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       column-gap: 10px;
+      @media(max-width: 991px){
+        row-gap: 8px;
+      }
       .inputW{
         grid-column: 4 span;
+        @media(max-width: 991px){
+          grid-column: 12 span;
+        }
         input {
           background-color: #fff;
         }

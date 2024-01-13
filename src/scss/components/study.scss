@@ -2,6 +2,14 @@
   background-color: #F2F2F2;
   padding-top: 92px;
   padding-bottom: 165px;
+  @media(max-width: 1400px){
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media(max-width: 767px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   &Title {
     margin-bottom: 17px;
   }
@@ -13,12 +21,18 @@
     margin-right: auto;
     font-size: 15px;
     line-height: normal;
+    @media(max-width: 767px){
+      margin-bottom: 25px;
+    }
   }
   &Slider {
     max-width: 1130px;
     padding-top: 33px;
     .swiper-wrapper {
       justify-content: center;
+      @media(max-width: 991px){
+        justify-content: flex-start;
+      }
     }
   }
   &Slide {
@@ -33,6 +47,9 @@
       font-weight: 700;
       font-size: 18px;
       line-height: normal;
+      @media(max-width: 767px){
+        font-size: 16px;
+      }
     }
     &Img {
       margin-bottom: 18px;
@@ -42,6 +59,9 @@
         height: 230px;
         object-fit: cover;
         border-radius: 20px;   
+        @media(max-width: 1199px){
+          height: 180px;
+        }
       }
     }
     &Link {
@@ -51,5 +71,24 @@
       margin-top: 10px;
       text-transform: uppercase;
     }
+  }
+  .swiper-pagination {
+    display: none;
+    @media(max-width: 767px){
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      position: unset;
+      margin-top: 20px;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+    background: #ced4dd;
+  }
+  .swiper-pagination-bullet-active {
+    background: #39AE68;
   }
 }
