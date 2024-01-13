@@ -41,7 +41,7 @@ var mySwiperStudy = new Swiper(studySlider, {
 // Burger
 const btnMenu = document.querySelector('#toggle');
 const menu = document.querySelector('.headerNav');
-const menuClose = document.querySelector('.header-mob-close');
+
 const bodyEl = document.querySelector('body');
 const menuLine1 = document.querySelector('.top-bun');
 const menuLine2 = document.querySelector('.meat');
@@ -70,14 +70,12 @@ btnMenu?.addEventListener('click', function (e) {
   bodyOverflow();
   toggleMenuLine();
 });
-menuClose?.addEventListener('click', function (e) {
-  menuCloseF();
-});
 
 // close menu in Landing page
 $(document).on("click", ".headerNavList li a", function (e) {
   $('.headerNav').removeClass('active');
   $('body').removeClass('hidden');
   toggleBurger();
+  toggleMenuLine();
 });
 
